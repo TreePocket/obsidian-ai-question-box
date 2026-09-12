@@ -1,0 +1,11 @@
+node_modules/
+dist/
+data.json
+.env
+.env.*
+!.env.example
+.DS_Store
+*.log
+.obsidian/
+.claudian/
+.claude/

@@ -1,0 +1,9 @@
+{
+  "id": "ai-question-box",
+  "name": "AI 提问框",
+  "version": "1.1.2",
+  "minAppVersion": "1.7.2",
+  "description": "插入可调色的提问框，复用 Claudian 的 Claude 配置批量回答，并将答案保存在嵌套框内。",
+  "author": "TreePocket",
+  "isDesktopOnly": true
+}

@@ -1,0 +1,6 @@
+{
+  "name": "obsidian-ai-question-box",
+  "version": "1.1.2",
+  "private": true,
+  "scripts": { "build": "node build.js", "test": "node --test tests/*.test.js", "check": "node --check main-source.js && node --check main.js && node --check core.js && node --check bridge.js && node --check stable-view.js && node --check annotations.js && node --check follow-up.js" }
+}

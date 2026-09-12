@@ -1,0 +1,61 @@
+.callout[data-callout="ai-question"] {
+  --callout-icon: lucide-message-circle-question;
+  background: var(--aqb-question-bg) !important;
+  color: var(--aqb-question-text) !important;
+  border: 1px solid var(--aqb-question-border);
+  border-left-width: 4px;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin: 20px 0;
+  overflow: visible;
+  mix-blend-mode: normal;
+}
+.callout[data-callout="ai-answer"] {
+  --callout-icon: lucide-sparkles;
+  background: var(--aqb-answer-bg) !important;
+  color: var(--aqb-answer-text) !important;
+  border: 1px solid var(--aqb-answer-border);
+  border-left-width: 3px;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin: 16px 0 0;
+  mix-blend-mode: normal;
+}
+.callout[data-callout="ai-question"] > .callout-title { color: var(--aqb-question-text); align-items: center; gap: 8px; }
+.callout[data-callout="ai-answer"] > .callout-title { color: var(--aqb-answer-text); }
+.callout[data-callout="ai-answer"] > .callout-title { cursor: pointer; }
+.callout[data-callout="ai-answer"] > .callout-title:focus-visible { outline: 2px solid var(--aqb-answer-border); outline-offset: 4px; border-radius: 4px; }
+.callout[data-callout="ai-answer"].aqb-foldable.is-collapsed > .callout-content { display: none !important; }
+.callout[data-callout="ai-answer"].aqb-foldable:not(.is-collapsed) > .callout-content { display: block !important; height: auto !important; }
+.callout[data-callout="ai-question"] > .callout-title .callout-icon { color: var(--aqb-question-text); }
+.callout[data-callout="ai-answer"] > .callout-title .callout-icon { color: var(--aqb-answer-text); }
+.callout[data-callout="ai-question"] .callout-content { overflow-wrap: anywhere; }
+.callout[data-callout="ai-question"] pre { overflow-x: auto; }
+.callout[data-callout="ai-question"] .callout-content > :last-child { margin-bottom: 0; }
+.callout[data-callout="ai-answer"] > .callout-content:empty::after { content: '等待 AI 回答'; font-size: .9em; }
+.aqb-answer-button { margin-left: auto; flex-shrink: 0; min-height: 36px; font-size: .85em; }
+.aqb-question-input { display: block; resize: vertical; width: 100%; margin: 8px 0 16px; min-height: 120px; }
+.aqb-actions { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.aqb-actions button { min-height: 44px; }
+.aqb-report-item { padding: 12px 0; border-bottom: 1px solid var(--background-modifier-border); overflow-wrap: anywhere; }
+.aqb-status { cursor: pointer; }
+.aqb-preview { width: 100%; }
+.aqb-stable-widget { display: block; width: 100%; white-space: normal; line-height: var(--line-height-normal); font-family: var(--font-text); }
+.aqb-stable-widget, .aqb-stable-widget * { -webkit-user-select: text; user-select: text; }
+.aqb-stable-widget button, .aqb-stable-widget .callout-title { -webkit-user-select: none; user-select: none; }
+.aqb-stable-widget .callout-content { -webkit-user-select: text; user-select: text; }
+.aqb-stable-widget .callout[data-callout="ai-question"] { margin: 12px 0; }
+.aqb-tools { display:flex; flex-wrap:wrap; gap:6px; margin-left:auto; }
+.aqb-tools button { min-height:32px; font-size:.8em; padding:4px 8px; }
+.callout[data-callout="ai-question"] > .callout-title:has(.aqb-tools) { flex-wrap:wrap; }
+mark.aqb-highlight { background:#ffe066 !important; color:#191919 !important; border-radius:2px; padding:0; box-decoration-break:clone; }
+.aqb-question-body > :first-child { margin-top:12px; }
+.aqb-followup-quote { max-height:180px; overflow:auto; white-space:pre-wrap; border-left:3px solid var(--interactive-accent); margin:8px 0 16px; padding:8px 12px; }
+.callout[data-callout="ai-question"].aqb-followup-turn { background:transparent !important; border:0; border-top:1px dashed var(--aqb-question-border); border-radius:0; padding:16px 0 0; margin:20px 0 0; }
+.aqb-followup-turn > .callout-title { font-size:.95em; }
+.aqb-answer-button:focus-visible, .aqb-status:focus-visible { outline: 2px solid var(--interactive-accent); outline-offset: 3px; }
+@media (max-width: 500px) {
+  .callout[data-callout="ai-question"] { padding: 12px; }
+  .callout[data-callout="ai-answer"] { padding: 10px; }
+  .aqb-answer-button { min-height: 44px; }
+}
